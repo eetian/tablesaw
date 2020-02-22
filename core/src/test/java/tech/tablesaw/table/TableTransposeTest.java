@@ -31,6 +31,8 @@ public class TableTransposeTest {
             TABLE_NAME,
             DoubleColumn.create("value1", 1.0, 1.1, 1.2),
             DoubleColumn.create("value2", 2.0, 2.1, 2.2));
+    System.out.println(testTable);
+    System.out.println("\n");
     Table result = testTable.transpose();
 
     assertTableEquals(
@@ -40,6 +42,9 @@ public class TableTransposeTest {
             DoubleColumn.create("1", 1.1, 2.1),
             DoubleColumn.create("2", 1.2, 2.2)),
         result);
+    System.out.println(result);
+    System.out.println("\n");
+    System.out.println(testTable);
   }
 
   @Test
